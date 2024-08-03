@@ -1,0 +1,36 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 2em;
+}
+
+.group-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #75ab79;
+  box-shadow: 0 0 5px #ccc;
+  margin: 0;
+  max-width: 230px;
+}
+
+.group-header {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #0e1437;
+  color: white;
+  margin: 0;
+}
+
+.group-teams {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.group-teams img {
+  width: 80px;
+  margin: 0 auto;
+}

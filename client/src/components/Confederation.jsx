@@ -1,18 +1,26 @@
 import { useState } from "react";
 
-export default function Confederation({ teams, confederation, maxSelected }) {
-  const [selectedTeams, setSelectedTeams] = useState([]);
+export default function Confederation({
+  teams,
+  confederation,
+  maxSelected,
+  selectedTeams,
+  updateSelectedTeams,
+}) {
   const [errMsg, setErrMsg] = useState("");
 
   const handleCLick = (team) => {
-    if (selectedTeams.includes(team)) {
-      setSelectedTeams(selectedTeams.filter((t) => t !== team));
-    } else if (selectedTeams.length >= maxSelected) {
+    if (
+      selectedTeams.filter((t) => t.confederacion === confederation).length >=
+        maxSelected &&
+      !selectedTeams.some((t) => t._id === team._id)
+    ) {
       return setErrMsg(
         "No puedes seleccionar más equipos de esta confederación"
       );
     } else {
-      setSelectedTeams([...selectedTeams, team]);
+      setErrMsg("");
+      updateSelectedTeams(confederation, team);
     }
   };
 

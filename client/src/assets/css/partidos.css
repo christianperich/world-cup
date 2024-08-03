@@ -1,0 +1,74 @@
+.first-round {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: #473e3e 1px solid;
+}
+
+.partido {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.partido-card {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #473e3e;
+  margin-bottom: 10px;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 600px;
+  min-width: 350px;
+  margin: 10px;
+}
+
+.btn-play {
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  margin: auto;
+  cursor: pointer;
+  background-color: cornflowerblue;
+}
+
+.btn-play:hover {
+  background-color: #473e3e;
+}
+
+.btn-play.disabled {
+  background-color: grey;
+}
+
+.test {
+  background-color: aquamarine;
+}
+
+.positionsTable {
+  border-collapse: collapse;
+}
+
+.positionsTable th {
+  background-color: #473e3e;
+  color: white;
+}
+
+.positionsTable td {
+  text-align: center;
+  border: #473e3e 1px solid;
+  width: 35px;
+}
+
+.positionsTable .team-name {
+  text-align: left;
+  width: 120px;
+  padding-left: 10px;
+}

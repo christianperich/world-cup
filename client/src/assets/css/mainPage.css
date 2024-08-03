@@ -5,6 +5,7 @@
   justify-content: left;
   color: white;
   gap: 20px;
+  margin-bottom: 1em;
 }
 
 .team-selector .teams .team-btn {
@@ -22,7 +23,7 @@
 }
 
 .team-selector .teams .team-btn.selected {
-  background-color: #41db8b;
+  background-color: #30b671;
 }
 
 .all-teams {
@@ -32,4 +33,11 @@
 .errMsg {
   color: red;
   text-align: center;
+  margin: 1em;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }

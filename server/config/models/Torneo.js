@@ -1,19 +1,11 @@
 import mongoose from "mongoose";
+const { Schema } = mongoose;
 
-const TorneoSchema = new mongoose.Schema({
-  groups: {
-    name: {
-      type: String,
-      required: true,
-    },
-    teams: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Pais",
-        required: true,
-      },
-    ],
-  },
+const tournamentSchema = new Schema({
+  date: { type: Date, default: Date.now },
+  groups: [{ type: Schema.Types.ObjectId, ref: "Grupo" }],
+  etapas: { type: Schema.Types.ObjectId, ref: "Etapa" },
+  stats: [{ type: Schema.Types.ObjectId, ref: "Statistics" }],
 });
 
-export default mongoose.model("Torneo", TorneoSchema);
+export default mongoose.model("Torneo", tournamentSchema);
